@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GTM.Seeed.PulseOximeter</name>
+    </assembly>
+    <members>
+        <member name="T:Gadgeteer.Modules.Seeed.PulseOximeter">
+            <summary>
+            A PulseOximeter module for Microsoft .NET Gadgeteer
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.PulseOximeter.#ctor(System.Int32)">
+            <summary></summary>
+            <param name="socketNumber">The socket that this module is plugged in to.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.PulseOximeter.OnHeartbeat(Gadgeteer.Modules.Seeed.PulseOximeter,Gadgeteer.Modules.Seeed.PulseOximeter.Reading)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.Heartbeat"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> that raised the event.</param>
+            <param name="reading">The PulseOximeter reading.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.PulseOximeter.OnProbeAttached(Gadgeteer.Modules.Seeed.PulseOximeter)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeAttached"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> that raised the event.</param>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.PulseOximeter.OnProbeDetached(Gadgeteer.Modules.Seeed.PulseOximeter)">
+            <summary>
+            Raises the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeDetached"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> that raised the event.</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.PulseOximeter.IsProbeAttached">
+            <summary>
+            Whether the PulseOximeter's probe is attached to a finger.
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.PulseOximeter.LastReading">
+            <summary>
+            The most recent valid reading from the pulse oximeter
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.PulseOximeter.Heartbeat">
+            <summary>
+            Raised when the <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> detects a heartbeat.
+            </summary>
+            <remarks>
+            Implement this event handler when you want to provide an action associated with a heartbeat.
+            </remarks>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeAttached">
+            <summary>
+            Raised when the <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> detects that the probe is placed on a finger.
+            </summary>
+        </member>
+        <member name="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeDetached">
+            <summary>
+            Raised when the <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> detects that the probe is removed from a finger.
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.PulseOximeter.Reading">
+            <summary>
+            A class representing a pulse oximeter reading
+            </summary>
+        </member>
+        <member name="M:Gadgeteer.Modules.Seeed.PulseOximeter.Reading.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Make a new pulse oximeter reading
+            </summary>
+            <param name="PulseRate">The pulse rate</param>
+            <param name="SPO2">The oxygen saturation</param>
+            <param name="SignalStrength">The signal strength of the reading</param>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.PulseOximeter.Reading.PulseRate">
+            <summary>
+            The pulse rate (this is automatically averaged over time)
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.PulseOximeter.Reading.SPO2">
+            <summary>
+            The oxygen saturation, range 0-100
+            </summary>
+        </member>
+        <member name="P:Gadgeteer.Modules.Seeed.PulseOximeter.Reading.SignalStrength">
+            <summary>
+            The signal strength, range 0-15
+            </summary>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.PulseOximeter.HeartbeatHandler">
+            <summary>
+            Represents the delegate that is used to handle the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.Heartbeat"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> object that raised the event.</param>
+            <param name="reading">The PulseOximeter reading</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeAttachedHandler">
+            <summary>
+            Represents the delegate that is used to handle the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeAttached"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> object that raised the event.</param>
+        </member>
+        <member name="T:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeDetachedHandler">
+            <summary>
+            Represents the delegate that is used to handle the <see cref="E:Gadgeteer.Modules.Seeed.PulseOximeter.ProbeDetached"/> event.
+            </summary>
+            <param name="sender">The <see cref="T:Gadgeteer.Modules.Seeed.PulseOximeter"/> object that raised the event.</param>
+        </member>
+    </members>
+</doc>
