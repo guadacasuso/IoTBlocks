@@ -85,7 +85,7 @@ namespace GPRSTest
                 {
                     cellularRadio.SendATCommand("H"); // Hang up voice call.
                     cellularRadio.SendSms( "13059045624", "Por wassap :) avisame si te llega!!! ");
-                    //cellularRadio.SendSms("5491156302010", "Bendiciones!! avisame si te llega!!! ");
+                    
                     
                     //954 927 6317 
 
